@@ -1,6 +1,50 @@
 .header{
   width: 100%;
-  min-height: 40px;
-  background-color: #f00;
+  padding-top: 26px;
+  min-height: 90px;
+  background-color: #fff;
 }
 
+.main_logo__txt{
+  color: #067db4;
+  font-family: $MalgunGothicBold;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.24px;
+}
+.main_logo__moto{
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-family: $Tahoma;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.82px;
+}
+
+.bl_nav__full{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.bl_nav{
+  width: 100%;
+  display: block;
+}
+
+.bl_nav__item{
+  display: inline-block;
+  margin-left: 1%;
+}
+.bl_nav__link{
+  color: $color_text;
+  font-family: $MSC300;
+  font-size: 18px;
+  font-weight: 400;
+
+  &:hover,
+  &:focus{
+    color: $color_blue;
+    text-decoration: underline;
+  }
+}
