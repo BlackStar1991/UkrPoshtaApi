@@ -530,8 +530,123 @@ textarea {
   }
 }
 
+.bl_viewCoast{
+  width: 100%;
+  margin-top: 50px;
+
+}
+
+.bl_viewCoast__item{
+  position: relative;
+  display: inline-block;
+  margin-left: 1%;
+  width: 230px;
+  min-height: 710px;
+  border-radius: 25px;
+  background-color: #fcfcfc;
+  &:first-child{
+    margin-left: 0;
+  }
+}
+
+.bl_viewCoast__price{
+  margin-top: 20px;
+  margin-left: -6px;
+  text-align: center;
+  color: #7d92a0;
+  font-family: $MSC300;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 36px;
+  &:before{
+    content: "$";
+    margin-right: 12px;
+    color: $color_blue;
+    font-family: $MSC500;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+
+.icon-present{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62px;
+  height: 62px;
+  z-index: 2;
+
+  &:before{
+    content:"\f0a3";
+    font-family: $FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color_pink;
+    font-size: 62px;
+  }
+  &:after{
+    content:"\f06b";
+    font-family: $FontAwesome;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+  }
+}
 
 
+.bl_viewCoast__name{
+  margin-top: 10px;
+  text-align: center;
+  color: $color_text;
+  font-family: $MSC700;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.availability_service{
+  vertical-align: top;
+  width: 100%;
+}
+
+.availability_services__item{
+  position: relative;
+  width: 34px;
+  height: 30px;
+  margin: 62px auto;
+  &:first-child{
+    margin-top: 14px;
+  }
+
+  &.yes{
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include sprite($icon-check-yes);
+      z-index: 1;
+    }
+  }
+  &.no{
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include sprite($icon-check-no);
+      z-index: 1;
+    }
+  }
+}
 
 
 

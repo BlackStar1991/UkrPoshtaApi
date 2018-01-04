@@ -20,17 +20,17 @@ $icon-check-no-total-width: 263px;
 $icon-check-no-total-height: 216px;
 $icon-check-no-image: '../image/sprite.png';
 $icon-check-no: (221px, 96px, -221px, -96px, 36px, 32px, 263px, 216px, '../image/sprite.png', 'icon-check-no', );
-$icon-check-ok-name: 'icon-check-ok';
-$icon-check-ok-x: 221px;
-$icon-check-ok-y: 55px;
-$icon-check-ok-offset-x: -221px;
-$icon-check-ok-offset-y: -55px;
-$icon-check-ok-width: 40px;
-$icon-check-ok-height: 36px;
-$icon-check-ok-total-width: 263px;
-$icon-check-ok-total-height: 216px;
-$icon-check-ok-image: '../image/sprite.png';
-$icon-check-ok: (221px, 55px, -221px, -55px, 40px, 36px, 263px, 216px, '../image/sprite.png', 'icon-check-ok', );
+$icon-check-yes-name: 'icon-check-yes';
+$icon-check-yes-x: 221px;
+$icon-check-yes-y: 55px;
+$icon-check-yes-offset-x: -221px;
+$icon-check-yes-offset-y: -55px;
+$icon-check-yes-width: 40px;
+$icon-check-yes-height: 36px;
+$icon-check-yes-total-width: 263px;
+$icon-check-yes-total-height: 216px;
+$icon-check-yes-image: '../image/sprite.png';
+$icon-check-yes: (221px, 55px, -221px, -55px, 40px, 36px, 263px, 216px, '../image/sprite.png', 'icon-check-yes', );
 $icon-clock-blue-max-name: 'icon-clock-blue-max';
 $icon-clock-blue-max-x: 0px;
 $icon-clock-blue-max-y: 83px;
@@ -122,7 +122,7 @@ $icon-speedometr-blue: (77px, 83px, -77px, -83px, 77px, 66px, 263px, 216px, '../
 $spritesheet-width: 263px;
 $spritesheet-height: 216px;
 $spritesheet-image: '../image/sprite.png';
-$spritesheet-sprites: ($icon-check-no, $icon-check-ok, $icon-clock-blue-max, $icon-clock-blue, $icon-clock-white, $icon-hands-blue, $icon-key-white, $icon-keybord-blue, $icon-shield-white, $icon-speedometr-blue, );
+$spritesheet-sprites: ($icon-check-no, $icon-check-yes, $icon-clock-blue-max, $icon-clock-blue, $icon-clock-white, $icon-hands-blue, $icon-key-white, $icon-keybord-blue, $icon-shield-white, $icon-speedometr-blue, );
 $spritesheet: (263px, 216px, '../image/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
