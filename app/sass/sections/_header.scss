@@ -1,6 +1,7 @@
 .header{
   width: 100%;
   padding-top: 26px;
+  padding-bottom: 20px;
   min-height: 90px;
   background-color: #fff;
 }
@@ -47,4 +48,81 @@
     color: $color_blue;
     text-decoration: underline;
   }
+}
+
+
+
+.bl_info{
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  max-width:206px;
+}
+
+
+.icon-envelop{
+  &:before{
+    content: "\f0e0";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: $FontAwesome;
+    color: $color_btn;
+  }
+}
+
+.icon-phone{
+  &:before{
+    content: "\f095";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: $FontAwesome;
+    color: $color_btn;
+  }
+}
+
+.bl_info__tel{
+  position: relative;
+  display: block;
+  padding-left: 26px;
+  color: $color_text;
+  font-family: $MSC700;
+  font-size: 20px;
+  font-weight: 400;
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  }
+}
+
+.bl_info__email{
+  position: relative;
+  display: block;
+  padding-left: 26px;
+  margin-top: 4px;
+  color: $color_grey;
+  font-family: $MSC300;
+  font-size: 14px;
+  font-weight: 400;
+
+  &:hover,
+  &:focus{
+    text-decoration: underline;
+  }
+}
+
+.btn_sendLetter{
+  position: relative;
+  float: right;
+  width: 220px;
+  height: 50px;
+  line-height: 50px;
+  color: $color_btn;
+  font-family: $MSC500;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 3px 4px 3px 1px rgba(186, 156, 16, 0.79);
+  border-radius: 8px;
+  background-color: #fdda24;
 }
