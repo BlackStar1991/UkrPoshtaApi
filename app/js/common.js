@@ -34,57 +34,53 @@ window.onload = function() {
 
 
 
-////// HITs slider
+////// customers slider
 
-    // function sliderHits() {
-    //
-    //     var currentItems = 4,
-    //         sliderItems = $(".bl_slider__item").length,
-    //         currentLoop;
-    //     if (sliderItems > currentItems) {
-    //         currentLoop = true;
-    //     }else {
-    //         currentLoop = false;
-    //     }
-    //
-    //
-    //     $(".bl_sliderHits").owlCarousel({
-    //         items: currentItems,
-    //         loop: currentLoop,
-    //         nav: true,
-    //         navText: true,
-    //         dots: false,
-    //         autoplay: false,
-    //         stopOnHover: true,
-    //         // margin: 6,
-    //         smartSpeed: 1000, //Время движения слайда
-    //         autoplayTimeout: 4000, //Время смены слайда
-    //         pagination: false,
-    //         responsiveClass: true,
-    //         responsive: {
-    //             1200: {
-    //                 items: 4
-    //             },
-    //             992: {
-    //                 items: 3,
-    //                 center: true
-    //             },
-    //             550: {
-    //
-    //                 dots: false,
-    //                 items: 2
-    //             },
-    //             320: {
-    //                 dots: false,
-    //                 items: 1,
-    //                 center: true
-    //             }
-    //
-    //         }
-    //     });
-    // }
-    //
-    // sliderHits();
+    function sliderHits() {
+
+        var currentItems = 4,
+            sliderItems = $(".bl_customers__item").length,
+            currentLoop;
+            currentLoop = sliderItems > currentItems;
+
+
+        $(".bl_customers__full").owlCarousel({
+            items: currentItems,
+            loop: currentLoop,
+            nav: true,
+            navText: true,
+            dots: false,
+            autoplay: false,
+            stopOnHover: true,
+            margin: 90,
+            smartSpeed: 1000, //Время движения слайда
+            autoplayTimeout: 4000, //Время смены слайда
+            pagination: false,
+            responsiveClass: true,
+            responsive: {
+                1200: {
+                    items: 4
+                },
+                992: {
+                    items: 3,
+                    center: true
+                },
+                550: {
+
+                    dots: false,
+                    items: 2
+                },
+                320: {
+                    dots: false,
+                    items: 1,
+                    center: true
+                }
+
+            }
+        });
+    }
+
+    sliderHits();
 
 /// SLICK SLIDER
 
@@ -120,28 +116,6 @@ window.onload = function() {
         });
     */
 
-    // Zoom Effect
-    /*
-        function zoomEffect() {
-
-            if (body.width() >= 1200) {
-                $(".bl_product__productSlider .slick-active .bl_product_image").elevateZoom({
-                    borderSize: 2,
-                    borderColour: "#7f8000"
-                });
-            }else if ( (body.width() < 1200) && (body.width() > 768) ) {
-                $(".bl_product__productSlider .slick-active .bl_product_image").elevateZoom({
-                    zoomType: "inner",
-                    cursor: "crosshair"
-                });
-            }else {
-                return false;
-            }
-
-
-        }
-        zoomEffect();
-    */
 
 
 // Ancor to top
@@ -180,83 +154,31 @@ window.onload = function() {
         });
      */
 
+// Video play
+   var btnPlayVideo = $(".js-play");
+
+    btnPlayVideo.on("click", function () {
+        $(this).toggleClass(active);
+        if (btnPlayVideo.hasClass("active")) {
+            $("video")[0].play();
+        } else {
+            $("video")[0].pause();
+        }
+    });
+////////////
+
+        var btnQestion =$(".js-question");
+    btnQestion.on("click", function () {
+       $(this).parent(".bl_qustions__item").toggleClass(active);
+    });
+
+
 
 // FILTER for telephone number
 
     var telephonseInput = $("input[type='tel']");
     telephonseInput.mask("+38 (0" + "99) 999-99-99", {placeholder: "+38 (0__) ___+__+__"});
 
-    /*
-        ////////////////// POPUPS LOGIC
-
-            function popupWindowShow(btn, field) {
-                btn.on("click", function () {
-
-                    field.removeClass("hidden");
-                    blackWrapper.removeClass("hidden");
-                    blackWrapper.animate({opacity: 0.6}, 300);
-                });
-            }
-
-            function closePopupWindow(btn, field) {
-                btn.on("click", function () {
-                    field.addClass("hidden");
-                    blackWrapper.addClass("hidden");
-                    blackWrapper.animate({opacity: 0}, 400);
-                })
-            }
-
-
-        /// POPUP BIFORE ADD TO SHOPBAG
-
-            function popupWindowBiforeAddToShopBag() {
-
-                var TESTBUTTON = $(".TEST_BUTTON");
-
-                var popupWindow = $(".popup_likeShopbag"),
-                    buttonClose = $(".popup_likeShopbag__close"),
-                    buttonContinueBuying = $(".popup_likeShopbag__continueBuying");
-
-                popupWindowShow(TESTBUTTON, popupWindow);
-
-                closePopupWindow(buttonClose, popupWindow);
-                closePopupWindow(buttonContinueBuying, popupWindow);
-                closePopupWindow(blackWrapper, popupWindow);
-
-            }
-
-            popupWindowBiforeAddToShopBag();
-
-        ////////// CallBack PopUp
-
-            function popupWindowCallBack() {
-                var buttonCallback = $(".btn_callBack"),
-                    fieldCallBack = $(".bl_callback"),
-                    buttonClose = $(".bl_callback__close");
-
-                popupWindowShow(buttonCallback, fieldCallBack);
-                closePopupWindow(buttonClose, fieldCallBack);
-                closePopupWindow(blackWrapper, fieldCallBack);
-
-
-            }
-
-            popupWindowCallBack();
-
-
-        //// Succsess PopUp
-
-            function popupWindowSuccsess() {
-
-                var fieldSuccess = $(".bl_success");
-
-                closePopupWindow(blackWrapper, fieldSuccess);
-                closePopupWindow( fieldSuccess, fieldSuccess);
-            }
-
-            popupWindowSuccsess();
-
-        */
 
 
 };
