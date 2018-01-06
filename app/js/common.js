@@ -1,7 +1,6 @@
-window.onload = function() {
+window.onload = function () {
 
-    var blackWrapper = $(".blackWrapper"),
-        body = $("body"),
+    var body = $("body"),
         active = "active",
         $window = $(window);
 
@@ -20,10 +19,10 @@ window.onload = function() {
     }
 
     /// scrollButton
-    function slideSubMenu(btn, fieldUnderBtn, displayView){
-        btn.each(function(){
+    function slideSubMenu(btn, fieldUnderBtn, displayView) {
+        btn.each(function () {
             $(this).on({
-                click: function (){
+                click: function () {
                     if ($window.width() <= displayView) {
                         fieldUnderBtn.slideToggle(400);
                     }
@@ -32,16 +31,25 @@ window.onload = function() {
         });
     }
 
+////////// Animation Plane
 
+    var btnPlane = $(".icon-plane");
+
+    btnPlane.on("click", function () {
+        $(this).addClass(active);
+        setTimeout(function () {
+            btnPlane.removeClass(active)
+        }, 2000);
+    });
 
 ////// customers slider
 
-    function sliderHits() {
+    function sliderCustomers() {
 
         var currentItems = 4,
             sliderItems = $(".bl_customers__item").length,
             currentLoop;
-            currentLoop = sliderItems > currentItems;
+        currentLoop = sliderItems > currentItems;
 
 
         $(".bl_customers__full").owlCarousel({
@@ -50,11 +58,11 @@ window.onload = function() {
             nav: true,
             navText: true,
             dots: false,
-            autoplay: false,
+            autoplay: true,
             stopOnHover: true,
             margin: 90,
-            smartSpeed: 1000, //Время движения слайда
-            autoplayTimeout: 4000, //Время смены слайда
+            smartSpeed: 1000,
+            autoplayTimeout: 4000,
             pagination: false,
             responsiveClass: true,
             responsive: {
@@ -80,82 +88,24 @@ window.onload = function() {
         });
     }
 
-    sliderHits();
-
-/// SLICK SLIDER
-
-    /*
-        $(".bl_product__productSlider").slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.bl_product__verticalSlider',
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: true,
-                        prevArrow: '<div class="mainProductSlickArrow-prev"></div>',
-                        nextArrow: '<div class="mainProductSlickArrow-next"></div>',
-                        infinite: true
-                    }
-                },
-                {
-                    breakpoint: 320,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: true,
-                        prevArrow: '<div class="mainProductSlickArrow-prev"></div>',
-                        nextArrow: '<div class="mainProductSlickArrow-next"></div>',
-                        infinite: true
-                    }
-                }
-            ]
-        });
-    */
+    sliderCustomers();
 
 
 
-// Ancor to top
-    /*
-        $(".bl_ancor").on("click", "a", function (event) {
+// Slow Ancor
+
+
+
+        $("a[href^=\"#\"]").on("click", function(){
             event.preventDefault();
             var id = $(this).attr('href'),
-                top = $(id).offset().top;
-            $('body,html').animate({scrollTop: top}, 500);
+                destination = $(id).offset().top;
+            $('body,html').animate({scrollTop: destination}, 1000);
         });
-        $(window).scroll(function () {
 
-
-
-            var ancor = $(".bl_ancor"),
-                windowHeight = $(window).height() / 2;
-
-            if ($(this).scrollTop() > windowHeight) {
-
-                ancor.removeClass("hidden");
-
-            } else {
-                ancor.addClass("hidden");
-            }
-
-
-            if ( ($(this).scrollTop() >= topMainHeaderBlock) && (screenWidth >= 1027)) {
-                mainHeaderBlock.addClass(mainHeaderFixed);
-                mainNavigation.addClass(mainNavigationFixed);
-            } else {
-                mainHeaderBlock.removeClass(mainHeaderFixed);
-                mainNavigation.removeClass(mainNavigationFixed);
-            }
-
-
-        });
-     */
 
 // Video play
-   var btnPlayVideo = $(".js-play");
+    var btnPlayVideo = $(".js-play");
 
     btnPlayVideo.on("click", function () {
         $(this).toggleClass(active);
@@ -165,13 +115,14 @@ window.onload = function() {
             $("video")[0].pause();
         }
     });
+
+
 ////////////
 
-        var btnQestion =$(".js-question");
+    var btnQestion = $(".js-question");
     btnQestion.on("click", function () {
-       $(this).parent(".bl_qustions__item").toggleClass(active);
+        $(this).parent(".bl_qustions__item").toggleClass(active);
     });
-
 
 
 // FILTER for telephone number
@@ -179,8 +130,11 @@ window.onload = function() {
     var telephonseInput = $("input[type='tel']");
     telephonseInput.mask("+38 (0" + "99) 999-99-99", {placeholder: "+38 (0__) ___+__+__"});
 
-
-
 };
 
+/// Map
 
+var coverMap = $(".bl_map__wrapper");
+coverMap.on("click", function () {
+    $(this).remove();
+});

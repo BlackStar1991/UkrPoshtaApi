@@ -2,8 +2,7 @@
   width: 100%;
   padding-top: 26px;
   padding-bottom: 20px;
-  min-height: 90px;
-  background-color: #fff;
+
 }
 
 .main_logo__txt{
@@ -42,11 +41,15 @@
   font-family: $MSC300;
   font-size: 18px;
   font-weight: 400;
+  padding-bottom: 10px;
+  transition: all, .3s;
+  border-bottom: 1px solid #fff;
 
   &:hover,
   &:focus{
-    color: $color_blue;
-    text-decoration: underline;
+    outline: none;
+    transition: all, .3s;
+    border-bottom: 1px solid $color_blue;
   }
 }
 
@@ -92,6 +95,7 @@
   font-weight: 400;
   &:hover,
   &:focus{
+    outline: none;
     text-decoration: underline;
   }
 }
@@ -108,6 +112,7 @@
 
   &:hover,
   &:focus{
+    outline: none;
     text-decoration: underline;
   }
 }
@@ -125,4 +130,8 @@
   box-shadow: 3px 4px 3px 1px rgba(186, 156, 16, 0.79);
   border-radius: 8px;
   background-color: #fdda24;
+
+  &:focus{
+    outline: none;
+  }
 }

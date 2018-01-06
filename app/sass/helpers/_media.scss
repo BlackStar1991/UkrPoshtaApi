@@ -5,12 +5,27 @@
 
 /* Large Devices, Wide Screens 1280px */
 @media only screen and (max-width: 1200px) {
+ .main_logo__txt{
+   font-size: 20px;
+ }
+  .main_logo__moto{
+    font-size: 9px;
+  }
 
+  .btn_sendLetter{
+    width: 178px;
+  }
 }
 
 /* Medium Devices, Desktops 992px */
 @media only screen and (max-width: 991px) {
 
+  .bl_nav__full{
+    position: fixed;
+  }
+  .bl_nav__item{
+    display: block;
+  }
 }
 
 /* Small Devices, Tablets 768px */

@@ -50,19 +50,19 @@
     <header id="header" class="header">
         <div class="mainWrapper">
             <div class="container">
-                <div class="col-md-2">
+                <div class="col-xs-6 col-md-2">
                     <a class="main_logo" href="#">
                         <p class="main_logo__txt">API ukrpochta</p>
-                        <p class="main_logo__moto">интеграция с укр почтой</p>
+                        <p class="main_logo__moto hidden-xs hidden-sm">интеграция с укр почтой</p>
                     </a>
                 </div>
-                <div class="col-md-5">
+                <div class="col-xs-6 col-md-5">
                     <nav class="bl_nav__full">
                         <ul class="bl_nav">
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">О компании</a></li>
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">Портфолио</a></li>
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">Цены</a></li>
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">Контакты</a></li>
+                            <li class="bl_nav__item"><a href="#aboutCompany" class="bl_nav__link">О компании</a></li>
+                            <li class="bl_nav__item"><a href="#portfolio" class="bl_nav__link">Портфолио</a></li>
+                            <li class="bl_nav__item"><a href="#price" class="bl_nav__link">Цены</a></li>
+                            <li class="bl_nav__item"><a href="#contacts" class="bl_nav__link">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -72,7 +72,7 @@
                         <a class="bl_info__email icon-envelop"
                            href="mailto:info@webstars.com.ua">info@webstars.com.ua</a>
                     </div>
-                    <a class="btn_sendLetter" href="#">Отправить заявку</a>
+                    <a class="btn_sendLetter" href="#mainCallBack">Отправить заявку</a>
                 </div>
             </div>
 
@@ -106,7 +106,7 @@
 
                                 </label>
 
-                                <button class="form_callback__button icon-plane" type="button">Отправить</button>
+                                <button class="form_callback__button icon-plane js-callBack1" type="button">Отправить</button>
                             </div>
 
                         </form>
@@ -160,7 +160,7 @@
                 </div>
             </div>
 
-            <div class="bl_coast">
+            <div id="price" class="bl_coast">
                 <div class="container">
 
                     <h2 class="bl_coast__title">Сроки исполнения и стоимость</h2>
@@ -229,7 +229,7 @@
             </div>
 
 
-            <div class="bl_aboutCompany clearfix">
+            <div id="aboutCompany" class="bl_aboutCompany clearfix">
                 <div class="container">
                     <div class="col-xs-12">
                         <div class="bl_aboutCompany__full">
@@ -372,7 +372,7 @@
             </div>
 
 
-            <div class="bl_customers">
+            <div id="portfolio" class="bl_customers">
                 <div class="container">
                     <div class="col-xs-12">
                         <h2 class="bl_customers__title">Наши клиенты</h2>
@@ -398,14 +398,86 @@
             </div>
 
 
+
+            <div id="contacts" class="bl_map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10149.908580018719!2d30.45935369749192!3d50.50668821585081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d278803f59a5%3A0x7b50eb2640eaa958!2z0LLRg9C70LjRhtGPINCd0L7QstC-0LfQsNCx0LDRgNGB0YzQutCwLCAyLzYsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1515180638229"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="bl_map__wrapper"></div>
+                <div class="container">
+                    <div class="col-xs-12">
+                        <div  class="bl_contactInformation">
+                            <h2>Наши контакты</h2>
+                            <p class="icon-map-marker"><strong>Адрес:</strong></p>
+                            <p>04074, Украина,</p>
+                            <p>г.Киев,</p>
+                            <p>ул.Новозабарская, 2/6,</p>
+                            <p>офис 232</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mainCallBack" class="bl_callBack">
+                <div class="container">
+                    <div class="col-xs-12">
+                        <h2 class="bl_callBack__title">Остались вопросы?</h2>
+                        <p class="bl_callBack__text">Заполните форму — мы свяжемся с вами в ближайшее время!</p>
+                        <form class="bl_callBack__form clearfix" action="">
+                            <label class="bl_callBack__label icon-user">
+                                <span></span>
+                                <input type="text" placeholder="Ваше имя">
+                            </label>
+                            <label class="bl_callBack__label icon-mobile">
+                                <span></span>
+                                <input type="tel" placeholder="Ваш телефон">
+                            </label>
+                            <label class="bl_callBack__label icon-commenting">
+                                <textarea placeholder="Ваш вопрос"></textarea>
+                                <span></span>
+                            </label>
+
+                            <button class="form_callback__button icon-plane js-callBack2" type="button">Отправить</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </div>
     </main>
     <!-- ---------------------------------------- FOOTER --------------------------------------------------------- -->
     <footer class="footer">
+        <div class="container">
+            <div class="col-xs-6 col-md-2">
+                <a class="main_logo" href="#">
+                    <p class="main_logo__txt">API ukrpochta</p>
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-5">
+                <div class="bl_info">
+                    <a class="bl_info__tel icon-phone" href="tel: +380444851192">(044) 485-11-92</a>
+                    <a class="bl_info__email icon-envelop"
+                       href="mailto:info@webstars.com.ua">info@webstars.com.ua</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <nav class="bl_nav__full">
+                    <ul class="bl_nav">
+                        <li class="bl_nav__item"><a href="#aboutCompany" class="bl_nav__link">О компании</a></li>
+                        <li class="bl_nav__item"><a href="#portfolio" class="bl_nav__link">Портфолио</a></li>
+                        <li class="bl_nav__item"><a href="#price" class="bl_nav__link">Цены</a></li>
+                        <li class="bl_nav__item"><a href="#contacts" class="bl_nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
 
+        </div>
     </footer>
 </div>
-<div class="blackWrapper hidden"></div>
+
 
 
 <!-- ANCOR -->
