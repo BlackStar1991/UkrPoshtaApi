@@ -2,15 +2,10 @@ window.onload = function () {
 
     var body = $("body"),
         active = "active",
-        $window = $(window);
-    var allPrices = $(".bl_viewCoast");
+        $window = $(window),
+        allPrices = $(".bl_viewCoast");
 
-    ///  sliderEffect
-    function sliderEffectForButtons(button, element, duration) {
-        button.click(function () {
-            element.slideToggle(duration);
-        });
-    }
+
 
     //  hideShowEffect
     function hideShowEffect(button, element) {
@@ -19,18 +14,7 @@ window.onload = function () {
         });
     }
 
-    /// scrollButton
-    function slideSubMenu(btn, fieldUnderBtn, displayView) {
-        btn.each(function () {
-            $(this).on({
-                click: function () {
-                    if ($window.width() <= displayView) {
-                        fieldUnderBtn.slideToggle(400);
-                    }
-                }
-            });
-        });
-    }
+
 
     //// Mobile menu
 
@@ -38,7 +22,6 @@ window.onload = function () {
 
     btnMenu.on("click", function(){
        $(".header").toggleClass(active);
-
     });
 
 
@@ -124,21 +107,15 @@ window.onload = function () {
 
 
 
-
-
-
-
-
-
 // Slow Ancor
-
-
 
         $("a[href^=\"#\"]").on("click", function(){
             event.preventDefault();
             var id = $(this).attr('href'),
                 destination = $(id).offset().top;
             $('body,html').animate({scrollTop: destination}, 1000);
+
+            $(".header").removeClass(active);
         });
 
 
@@ -147,6 +124,8 @@ window.onload = function () {
 
     btnPlayVideo.on("click", function () {
         $(this).toggleClass(active);
+        $("video")[0].volume=0.8; /// громкость видио
+        volume=0.2;
         if (btnPlayVideo.hasClass("active")) {
             $("video")[0].play();
         } else {
@@ -176,3 +155,6 @@ var coverMap = $(".bl_map__wrapper");
 coverMap.on("click", function () {
     $(this).remove();
 });
+
+//// Для примера, удалить
+$(".js-callBack2").on("click", function() {$(".bl_success").removeClass("hidden")});

@@ -44,30 +44,33 @@
     <header id="header" class="header">
         <div class="mainWrapper">
             <div class="container">
-                <div class="col-md-2">
+                <div class="col-xs-5   col-md-2 correct_right">
                     <a class="main_logo" href="#">
                         <p class="main_logo__txt">API ukrpochta</p>
-                        <p class="main_logo__moto">интеграция с укр почтой</p>
+                        <p class="main_logo__moto hidden-xs hidden-sm">интеграция с укр почтой</p>
                     </a>
                 </div>
-                <div class="col-md-5">
+                <div class="col-xs-7   col-md-5 ">
+                    <div class="bl_info">
+                        <a class="bl_info__tel icon-phone" href="tel: +380444851192">(044) 485-11-92</a>
+                        <a class="bl_info__email icon-envelop hidden-xs hidden-sm"
+                           href="mailto:info@webstars.com.ua">info@webstars.com.ua</a>
+                    </div>
+                    <a class="btn_sendLetter hidden-xs hidden-sm" href="#mainCallBack">Отправить заявку</a>
+                    <button class="btn_menuList visible-sm visible-xs" type="button"></button>
+                </div>
+
+                <div class="col-xs-6   col-md-5 correct_right">
                     <nav class="bl_nav__full">
                         <ul class="bl_nav">
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">О компании</a></li>
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">Портфолио</a></li>
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">Цены</a></li>
-                            <li class="bl_nav__item"><a href="#" class="bl_nav__link">Контакты</a></li>
+                            <li class="bl_nav__item"><a href="#aboutCompany" class="bl_nav__link">О компании</a></li>
+                            <li class="bl_nav__item"><a href="#portfolio" class="bl_nav__link">Портфолио</a></li>
+                            <li class="bl_nav__item"><a href="#price" class="bl_nav__link">Цены</a></li>
+                            <li class="bl_nav__item"><a href="#contacts" class="bl_nav__link">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-md-5">
-                    <div class="bl_info">
-                        <a class="bl_info__tel icon-phone" href="tel: +380444851192">(044) 485-11-92</a>
-                        <a class="bl_info__email icon-envelop"
-                           href="mailto:info@webstars.com.ua">info@webstars.com.ua</a>
-                    </div>
-                    <a class="btn_sendLetter" href="#">Отправить заявку</a>
-                </div>
+
             </div>
 
         </div>
@@ -100,12 +103,12 @@
 
                                 </label>
 
-                                <button class="form_callback__button icon-plane" type="button">Отправить</button>
+                                <button class="form_callback__button icon-plane js-callBack1" type="button">Отправить</button>
                             </div>
 
                         </form>
 
-                        <div class="bl_decorIcons">
+                        <div class="bl_decorIcons hidden-xs">
                             <div class="bl_decorIcons__item">
                                 <div class="icon-key-white"></div>
                                 <p>Под ключ</p>
@@ -154,12 +157,12 @@
                 </div>
             </div>
 
-            <div class="bl_coast">
+            <div id="price" class="bl_coast ">
                 <div class="container">
 
                     <h2 class="bl_coast__title">Сроки исполнения и стоимость</h2>
 
-                    <div class="col-xs-4">
+                    <div class="col-xs-5 col-sm-5">
                         <p class="bl_coast__elements">Услуги:</p>
                         <ul class="bl_services">
                             <li class="bl_services__item">Кількість користувачів</li>
@@ -172,13 +175,13 @@
                             <li class="bl_services__item">Подарок</li>
                         </ul>
                     </div>
-                    <div class="col-xs-8">
+                    <div class="col-xs-7 col-sm-7">
                         <div class="bl_viewCoast">
                             <div class="bl_viewCoast__item">
                                 <div class="icon-present"></div>
                                 <p class="bl_viewCoast__price">99</p>
                                 <p class="bl_viewCoast__name">Премиум</p>
-                                <ul class="availability_services">
+                                <ul class="availability_services clearfix">
                                     <li class="availability_services__item yes"></li>
                                     <li class="availability_services__item yes"></li>
                                     <li class="availability_services__item yes"></li>
@@ -192,7 +195,7 @@
                             <div class="bl_viewCoast__item">
                                 <p class="bl_viewCoast__price">75</p>
                                 <p class="bl_viewCoast__name">Стандарт</p>
-                                <ul class="availability_services">
+                                <ul class="availability_services clearfix">
                                     <li class="availability_services__item yes"></li>
                                     <li class="availability_services__item yes"></li>
                                     <li class="availability_services__item yes"></li>
@@ -206,7 +209,7 @@
                             <div class="bl_viewCoast__item">
                                 <p class="bl_viewCoast__price">68</p>
                                 <p class="bl_viewCoast__name">Эконом</p>
-                                <ul class="availability_services">
+                                <ul class="availability_services clearfix">
                                     <li class="availability_services__item yes"></li>
                                     <li class="availability_services__item yes"></li>
                                     <li class="availability_services__item yes"></li>
@@ -223,13 +226,20 @@
             </div>
 
 
-            <div class="bl_aboutCompany clearfix">
+            <div id="aboutCompany" class="bl_aboutCompany clearfix">
                 <div class="container">
                     <div class="col-xs-12">
                         <div class="bl_aboutCompany__full">
                             <h2 class="bl_aboutCompany__title">О компании</h2>
-                            <p class="bl_aboutCompany__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.</p>
-                            <p class="bl_aboutCompany__text">По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+                            <p class="bl_aboutCompany__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру
+                                сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а
+                                начинающему оратору отточить навык публичных выступлений в домашних условиях. При
+                                создании генератора мы использовали небезизвестный универсальный код речей. Текст
+                                генерируется абзацами случайным и живым для визуально-слухового восприятия.</p>
+                            <p class="bl_aboutCompany__text">По своей сути рыбатекст является альтернативой
+                                традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках
+                                прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит
+                                любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
                         </div>
                     </div>
                 </div>
@@ -241,13 +251,13 @@
                     <div class="col-xs-12">
                         <h2 class="bl_integration__title">Технология интеграции API</h2>
                         <ul class="bl_integration__full">
-                           <li class="bl_integration__step">
-                               <div class="bl_integration__circle icon-keybord-white"></div>
-                               <p class="bl_integration__action">Заявка</p>
-                               <div class="bl_integration__work">
-                                   <p>Вы оставляете заявку на сайте</p>
-                               </div>
-                           </li>
+                            <li class="bl_integration__step">
+                                <div class="bl_integration__circle icon-keybord-white"></div>
+                                <p class="bl_integration__action">Заявка</p>
+                                <div class="bl_integration__work">
+                                    <p>Вы оставляете заявку на сайте</p>
+                                </div>
+                            </li>
                             <li class="bl_integration__step">
                                 <div class="bl_integration__circle icon-clock-white-max"></div>
                                 <p class="bl_integration__action">Договор</p>
@@ -279,7 +289,158 @@
                 <div class="container">
                     <div class="col-xs-12">
                         <h2 class="bl_video__title">Видеоролик</h2>
-                        
+                        <div class="bl_video__inner btn-play js-play">
+                            <video src="video/ukrPost.mp4" poster="image/bg_video.png"></video>
+                        </div>
+
+                        <p class="bl_video__text icon-eye">Смотреть <span>демо</span> пример </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bl_qustions">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h2 class="bl_qustions__title icon-question"><span>FAQ</span> Часто задаваемые вопросы</h2>
+
+                        <div class="bl_qustions__full clearfix">
+                            <div class="bl_qustions__half ">
+                                <div class="bl_qustions__item">
+                                    <button class="btn_question js-question" type="button"></button>
+                                    <div class="bl_qustions__query js-question">Какие документы нужны для регистрации по
+                                        программе?
+                                    </div>
+                                    <div class="bl_qustions__answer">
+                                        При создании генератора мы использовали небезизвестный универсальный код речей.
+                                        Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.
+                                    </div>
+                                </div>
+                                <div class="bl_qustions__item">
+                                    <button class="btn_question js-question" type="button"></button>
+                                    <div class="bl_qustions__query js-question">Какие документы для регистрации по
+                                        программе?
+                                    </div>
+                                    <div class="bl_qustions__answer">
+                                        При создании генератора мы использовали небезизвестный универсальный код речей.
+                                        Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.
+                                    </div>
+                                </div>
+                                <div class="bl_qustions__item">
+                                    <button class="btn_question js-question" type="button"></button>
+                                    <div class="bl_qustions__query js-question">Какие документы нужны?</div>
+                                    <div class="bl_qustions__answer">
+                                        При создании генератора мы использовали небезизвестный универсальный код речей.
+                                        Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="bl_qustions__half ">
+                               <div class="bl_qustions__item">
+                                   <button class="btn_question js-question" type="button"></button>
+                                   <div class="bl_qustions__query js-question">Какие документы нужны для регистрации по
+                                       программе?
+                                   </div>
+                                   <div class="bl_qustions__answer">
+                                       При создании генератора мы использовали небезизвестный универсальный код речей.
+                                       Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.
+                                   </div>
+                               </div>
+                               <div class="bl_qustions__item">
+                                   <button class="btn_question js-question" type="button"></button>
+                                   <div class="bl_qustions__query js-question">Какие документы нужны для регистрации по
+                                       программе?
+                                   </div>
+                                   <div class="bl_qustions__answer">
+                                       При создании генератора мы использовали небезизвестный универсальный код речей.
+                                       Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.
+                                   </div>
+                               </div>
+                               <div class="bl_qustions__item">
+                                   <button class="btn_question js-question" type="button"></button>
+                                   <div class="bl_qustions__query js-question">Какие документы нужны для регистрации по
+                                       программе?
+                                   </div>
+                                   <div class="bl_qustions__answer">
+                                       При создании генератора мы использовали небезизвестный универсальный код речей.
+                                       Текст генерируется абзацами случайным и живым для визуально-слухового восприятия.
+                                   </div>
+                               </div>
+                           </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="portfolio" class="bl_customers">
+                <div class="container">
+                    <div class="col-xs-12">
+                        <h2 class="bl_customers__title">Наши клиенты</h2>
+                        <ul class="bl_customers__full owl-carousel">
+                            <li class="bl_customers__item"><a href="#" class="bl_customers__link"><img src="image/customers/kormak.png" alt=""
+                                                                                                       class="bl_customers__img"></a>
+                            </li>
+                            <li class="bl_customers__item"><a href="#" class="bl_customers__link"><img src="image/customers/hydroscand.png" alt=""
+                                                                                                       class="bl_customers__img"></a>
+                            </li>
+                            <li class="bl_customers__item"><a href="#" class="bl_customers__link"><img src="image/customers/norfin.png" alt=""
+                                                                                                       class="bl_customers__img"></a>
+                            </li>
+                            <li class="bl_customers__item"><a href="#" class="bl_customers__link"><img src="image/customers/brw-mania.png" alt=""
+                                                                                                       class="bl_customers__img"></a>
+                            </li>
+                            <li class="bl_customers__item"><a href="#" class="bl_customers__link"><img src="image/customers/playboy.png" alt=""
+                                                                                                       class="bl_customers__img"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="contacts" class="bl_map">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10149.908580018719!2d30.45935369749192!3d50.50668821585081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d278803f59a5%3A0x7b50eb2640eaa958!2z0LLRg9C70LjRhtGPINCd0L7QstC-0LfQsNCx0LDRgNGB0YzQutCwLCAyLzYsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1515180638229"  frameborder="0" style="border:0" allowfullscreen></iframe>
+                <div class="bl_map__wrapper"></div>
+                <div class="container">
+                    <div class="col-xs-12">
+                        <div  class="bl_contactInformation">
+                            <h2>Наши контакты</h2>
+                            <p class="icon-map-marker"><strong>Адрес:</strong></p>
+                            <p>04074, Украина,</p>
+                            <p>г.Киев,</p>
+                            <p>ул.Новозабарская, 2/6,</p>
+                            <p>офис 232</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mainCallBack" class="bl_callBack">
+                <div class="container">
+                    <div class="col-xs-12">
+                        <h2 class="bl_callBack__title">Остались вопросы?</h2>
+                        <p class="bl_callBack__text">Заполните форму — мы свяжемся с вами в ближайшее время!</p>
+                        <form class="bl_callBack__form clearfix" action="">
+                            <label class="bl_callBack__label icon-user">
+                                <input type="text" placeholder="Ваше имя">
+                            </label>
+                            <label class="bl_callBack__label icon-mobile">
+                                <input type="tel" placeholder="Ваш телефон">
+                            </label>
+                            <label class="bl_callBack__label icon-commenting">
+                                <textarea placeholder="Ваш вопрос"></textarea>
+                            </label>
+                            <!-- Если пользователь допустил ошибку выводи сюда, убрав класс hidden, а потом через setTimeout сново добавляй и чисть text()-->
+                            <p class="bl_callBack__error hidden"> Ты допустил страшнейшую ошибку и за это мы оформили тебе подписку рекламы от mainGroup</p>
+
+                            <button class="form_callback__button icon-plane js-callBack2" type="button">Отправить</button>
+
+                        </form>
                     </div>
                 </div>
             </div>
@@ -291,19 +452,62 @@
     </main>
     <!-- ---------------------------------------- FOOTER --------------------------------------------------------- -->
     <footer class="footer">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-md-2">
+                <a class="main_logo" href="#">
+                    <p class="main_logo__txt">API ukrpochta</p>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5">
+                <div class="bl_info">
+                    <a class="bl_info__tel icon-phone" href="tel: +380444851192">(044) 485-11-92</a>
+                    <a class="bl_info__email icon-envelop"
+                       href="mailto:info@webstars.com.ua">info@webstars.com.ua</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <nav class="bl_nav__full">
+                    <ul class="bl_nav">
+                        <li class="bl_nav__item"><a href="#aboutCompany" class="bl_nav__link">О компании</a></li>
+                        <li class="bl_nav__item"><a href="#portfolio" class="bl_nav__link">Портфолио</a></li>
+                        <li class="bl_nav__item"><a href="#price" class="bl_nav__link">Цены</a></li>
+                        <li class="bl_nav__item"><a href="#contacts" class="bl_nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
 
+        </div>
     </footer>
 </div>
-<div class="blackWrapper hidden"></div>
 
 
-<!-- ANCOR -->
+<!-- Когда сообщение отправлено, убирай с блока hidden через 4s ставь снова-->
 
-<!--<div class="bl_ancor hidden-xs hidden">-->
-<!--<div class="bl_wrappen">-->
-<!--<a class="bl_ancor__link bl_ancor__icon" href="#header">Вверх</a>-->
-<!--</div>-->
-<!--</div>-->
+<div class="bl_success hidden">
+    <div class="icon-success">
+        <div class="container">
+            <div class="action">
+                <div class="trophy">
+                    <svg fill="#7FB90D" width="100%" height="100%" viewBox="0 0 24 24">
+                        <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"></path>
+                    </svg>
+                </div>
+                <div class="confetti"></div>
+                <div class="confetti two"></div>
+                <div class="confetti three"></div>
+                <div class="confetti four"></div>
+                <div class="confetti--purple"></div>
+                <div class="confetti--purple two"></div>
+                <div class="confetti--purple three"></div>
+                <div class="confetti--purple four"></div>
+            </div>
+        </div>
+
+    </div>
+    <p class="bl_success_text">Сообщение доставлено. Наш специалист свяжется с вами в ближайшее рабочее время</p>
+</div>
+
+
 
 
 <script src="libs/jquery.min.js"></script>

@@ -33,6 +33,17 @@
   .availability_services__item{
     margin: 56px auto;
   }
+  .bl_services__item:before{
+    padding-right: 5px;
+  }
+
+
+  .bl_qustions__full{
+    padding: 0 3%;
+  }
+  .bl_qustions__query{
+    font-size: 18px;
+  }
 
 }
 
@@ -192,6 +203,11 @@
     }
   }
 
+
+  .bl_qustions__half{
+    width: 100%;
+  }
+
 }
 
 /* Small Devices, Tablets 768px */
@@ -199,9 +215,23 @@
   .main_logo__txt{
     font-size: 18px;
   }
+
+  .bl_modulUkrPost__title{
+     font-size: 30px;
+   }
+
+  .bl_services__item{
+    font-size: 16px;
+  }
+
+  .bl_services__item:before{
+    display: none;
+  }
+
   .bl_info__tel{
     font-size: 18px;
   }
+
 
   .footer .main_logo__txt{
     text-align: center;
@@ -213,16 +243,33 @@
       font-size: 80px;
     }
   }
-}
 
-@media only screen and (max-width: 710px) {
-  .availability_services__item{
-    margin: 60px auto;
+  .bl_video{
+    margin-top: 50px;
   }
+
 }
 
 
 @media only screen and (max-width: 600px) {
+
+  .bl_modulUkrPost__title{
+    font-size: 25px;
+  }
+
+  .bl_modulUkrPost__description{
+    font-size: 18px;
+  }
+
+
+  .availability_services__item{
+    margin:  54px auto;
+  }
+
+  .icon-present{
+    width: 40px;
+    height: 40px;
+  }
 
   .bl_advantages{
     margin-top: 30px;
@@ -230,8 +277,17 @@
 
   .bl_aboutCompany__title,
   .bl_advantages__title,
-  .bl_integration__title{
+  .bl_integration__title,
+  .bl_video__title,
+  .bl_qustions__title,
+  .bl_qustions__title span,
+  .bl_customers__title,
+  .bl_contactInformation h2{
     font-size: 28px;
+  }
+
+  .icon-question:before{
+    font-size: 38px;
   }
 
   .bl_advantages__item{
@@ -249,14 +305,89 @@
 
   .btn-play{
     &:after{
-      font-size: 60px;
+      width: 55px;
+      height: 40px;
+      font-size: 55px;
     }
   }
 
+  .btn_question{
+    width: 38px;
+    height: 38px;
+    font-size: 42px;
+  }
+  .bl_qustions__query{
+    padding-left: 12px;
+    width: calc(100% - 60px);
+    line-height: 30px;
+  }
+
+  .bl_qustions__item.active .btn_question {
+    &:after {
+      content: "\f147";
+      font-size: 44px;
+    }
+  }
+
+
+  .bl_callBack__title{
+    margin-top: 44px;
+    font-size: 28px;
+  }
+  .bl_callBack__text{
+    font-size: 24px;
+  }
+
+  .bl_callBack__label{
+    max-width: initial;
+  }
+  .bl_callBack__label:nth-of-type(2) {
+    border-left: 1px solid #fff;
+  }
+  .bl_callBack__label input{
+    left: 28px;
+  }
+  .bl_callBack__form .icon-user,
+  .bl_callBack__form .icon-mobile{
+    &:before{
+      content: "";
+    }
+  }
+
+
 }
+@media only screen and (max-width: 521px) {
+
+  .bl_services__item{
+    margin-top: 20px;
+  }
+  .bl_viewCoast{
+    margin-top: 0;
+  }
+  .availability_services__item {
+    margin: 30px auto;
+  }
+  .availability_services__item:first-child{
+    margin-top: 28px;
+  }
+
+  .bl_viewCoast__item{
+    min-height: initial;
+  }
+}
+
 
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 480px) {
+  .bl_modulUkrPost__title{
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  .bl_modulUkrPost__description{
+    font-size: 14px;
+  }
+
   .main_logo__txt{
     font-size: 15px;
   }
@@ -271,6 +402,20 @@
   .btn_menuList{
     margin-top: -4px;
   }
+
+
+  .bl_services__item{
+    font-size: 14px;
+    margin-top: 25px;
+    border-bottom: 1px solid #fff;
+    box-sizing: border-box;
+    white-space:nowrap;
+  }
+
+  .availability_services__item{
+    margin: 32px auto;
+  }
+
 
   .bl_advantages__title {
     font-size: 28px;
@@ -290,6 +435,18 @@
   .btn-play{
     &:after{
       font-size: 40px;
+    }
+  }
+
+
+  .icon-present{
+    width: 40px;
+    height: 40px;
+    &:before{
+      font-size: 40px;
+    }
+    &:after{
+      font-size: 18px;
     }
   }
 

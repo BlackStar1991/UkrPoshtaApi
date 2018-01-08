@@ -27,7 +27,7 @@ body {
 
 body {
   position: relative;
-  font-family: Tahoma, sans-serif;
+  font-family: $MSC500, $MSC300, Tahoma, sans-serif;
   font-size: 18px;
   font-weight: 400;
   min-width: 320px;
@@ -39,7 +39,6 @@ body {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
 }
 
 .wrapperBlock {
@@ -84,7 +83,6 @@ body {
   height: 100%;
 }
 
-
 .footer {
   flex: 0 0 auto;
 }
@@ -95,6 +93,7 @@ img {
 }
 
 a {
+  font-family: $MSC500;
   text-decoration: none;
   color: #000;
   &:hover,
@@ -106,6 +105,7 @@ a {
 }
 
 p {
+  font-family: $MSC500;
   margin: 0;
   padding: 0;
 }
@@ -291,18 +291,19 @@ textarea {
 }
 
 .bl_callBack__label.icon-mobile:before,
-.bl_callBack__label.icon-user:before{
+.bl_callBack__label.icon-user:before {
   color: #fff;
   z-index: 5;
   top: 14px;
   font-weight: 400;
 }
 
-.bl_callBack__label.icon-user:before{
+.bl_callBack__label.icon-user:before {
   font-size: 24px;
   left: 39px;
 }
-.bl_callBack__label.icon-mobile:before{
+
+.bl_callBack__label.icon-mobile:before {
   font-size: 28px;
   left: 30px;
 }
@@ -345,7 +346,6 @@ textarea {
   border-radius: 8px;
   background-color: $color_btn;
   color: #fff;
-  font-family: $MSC500;
   font-size: 20px;
   line-height: 36px;
   margin-bottom: 10px;
@@ -377,27 +377,24 @@ textarea {
   }
 }
 
-.icon-plane.active:before{
+.icon-plane.active:before {
   animation: animationPlane .5s ease-in .2s;
 }
 
 @keyframes animationPlane {
- 100%,0%{
+  100%, 0% {
     top: 8px;
     left: 20px;
   }
-  50%,70%{
-    top:-30px;
+  50%, 70% {
+    top: -30px;
     left: 44px;
   }
-  71%{
-    top:48px;
+  71% {
+    top: 48px;
     left: 0;
   }
 }
-
-
-
 
 .bl_decorIcons {
   width: 100%;
@@ -413,7 +410,6 @@ textarea {
   min-width: 108px;
   min-height: 50px;
   color: #fff;
-  font-family: $MSC500;
   font-size: 24px;
   text-align: center;
 }
@@ -560,7 +556,6 @@ textarea {
   margin-top: 70px;
   text-align: right;
   color: #6de2ff;
-  font-family: $MSC500;
   font-size: 30px;
   line-height: 36px;
 }
@@ -574,7 +569,6 @@ textarea {
   position: relative;
   margin-top: 55px;
   color: #fff;
-  font-family: $MSC500;
   font-size: 24px;
   font-weight: 400;
   line-height: 36px;
@@ -602,7 +596,7 @@ textarea {
   min-height: 710px;
   border-radius: 25px;
   background-color: #fcfcfc;
-  &:nth-child(2){
+  &:nth-child(2) {
     margin: 0 1%;
   }
 }
@@ -620,7 +614,6 @@ textarea {
     content: "$";
     margin-right: 12px;
     color: $color_blue;
-    font-family: $MSC500;
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
@@ -705,6 +698,30 @@ textarea {
   }
 }
 
+//// owl navigation
+
+.bl_viewCoast .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-shadow: $color_blue 2px 2px 0, $color_blue -2px -2px 0,
+  $color_blue -2px 2px 0, $color_blue 2px -2px 0;
+
+  &:after {
+    content: "\f054";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: $FontAwesome;
+
+  }
+}
+
 ///// AboutCompany
 
 .bl_aboutCompany {
@@ -741,7 +758,6 @@ textarea {
 .bl_aboutCompany__text {
   margin-top: 45px;
   color: $color_text;
-  font-family: $MSC500;
   font-size: 18px;
   font-weight: 400;
 }
@@ -942,12 +958,11 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 110px;
-    height: 79px;
+    height: 80px;
     text-shadow: 0 0 43px rgba(255, 255, 255, 0.95);
     color: $color_pink;
     font-family: $FontAwesome;
     font-size: 110px;
-
 
     transition: .3s all;
     opacity: 1;
@@ -1021,13 +1036,19 @@ textarea {
   position: relative;
   width: 100%;
   margin-top: 66px;
-  padding: 0 12%;
+  padding: 0 11%;
+}
+
+.bl_qustions__half {
+  width: 50%;
+  float: left;
 }
 
 .bl_qustions__item {
-  float: left;
-  width: 50%;
+
+  width: 100%;
   margin-bottom: 58px;
+  vertical-align: top;
 }
 
 .btn_question {
@@ -1041,6 +1062,12 @@ textarea {
   font-size: 87px;
   background: none;
   outline: none;
+  border-radius: 12px;
+
+  &:focus{
+    box-shadow: 0 0 2px 2px $color_yellow;
+  }
+
   &:after {
     content: "\f0fe";
     position: absolute;
@@ -1064,10 +1091,12 @@ textarea {
   padding-left: 23px;
   width: calc(100% - 120px);
   color: $color_blue;
-  font-family: $MSC500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 36px;
   cursor: pointer;
+  &:focus{
+    text-decoration: underline;
+  }
 }
 
 .bl_qustions__answer {
@@ -1075,7 +1104,6 @@ textarea {
   float: right;
   margin-top: 27px;
   color: $color_text;
-  font-family: $MSC500;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -1123,19 +1151,14 @@ textarea {
   vertical-align: bottom;
 }
 
-
-
-
-
-
 ///// MAP
 
-.bl_map{
+.bl_map {
   position: relative;
   width: 100%;
   min-height: 630px;
   margin-top: 70px;
-  iframe{
+  iframe {
     width: 100%;
     min-height: 630px;
     border: none;
@@ -1144,7 +1167,7 @@ textarea {
 
 }
 
-.bl_map__wrapper{
+.bl_map__wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -1156,7 +1179,7 @@ textarea {
   opacity: 0;
 }
 
-.bl_contactInformation{
+.bl_contactInformation {
   position: absolute;
   top: 50%;
   transform: translateY(-125%);
@@ -1169,7 +1192,7 @@ textarea {
   background-color: $color_blue;
   z-index: 5;
 
-  h2{
+  h2 {
     margin-top: 50px;
     text-align: center;
     font-family: $MSC700;
@@ -1177,23 +1200,22 @@ textarea {
     line-height: 36px;
 
   }
-  p{
+  p {
     position: relative;
     padding-left: 28%;
-    font-family: $MSC500;
     font-size: 18px;
     font-weight: 400;
     line-height: 36px;
-    strong{
+    strong {
       font-family: $MSC700;
       text-transform: uppercase;
     }
   }
 }
 
-.icon-map-marker{
-  &:before{
-    content:"";
+.icon-map-marker {
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 16%;
@@ -1202,11 +1224,9 @@ textarea {
   }
 }
 
-
 /////////// CallBack FORM
 
-
-.bl_callBack{
+.bl_callBack {
   position: relative;
   width: 100%;
   min-height: 534px;
@@ -1214,14 +1234,15 @@ textarea {
   color: #fff;
 }
 
-.bl_callBack__title{
+.bl_callBack__title {
   margin-top: 76px;
   text-align: center;
   font-family: $MSC700;
   font-size: 48px;
   line-height: 36px;
 }
-.bl_callBack__text{
+
+.bl_callBack__text {
   text-align: center;
   font-family: $MSC300;
   font-size: 30px;
@@ -1229,7 +1250,7 @@ textarea {
   line-height: 36px;
 }
 
-.bl_callBack__form{
+.bl_callBack__form {
   display: block;
 
   margin: 25px auto 22px;
@@ -1237,7 +1258,7 @@ textarea {
   max-width: 754px;
 }
 
-.bl_callBack__label{
+.bl_callBack__label {
   position: relative;
   float: left;
   width: 100%;
@@ -1250,8 +1271,7 @@ textarea {
   font-size: 18px;
   line-height: 30px;
 
-
-  input{
+  input {
     //width: 100%;
     position: absolute;
     top: 50%;
@@ -1260,15 +1280,15 @@ textarea {
     background-color: $color_blue;
     border: none;
     z-index: 3;
-    &::placeholder{
+    &::placeholder {
       color: #fff;
     }
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
 
-  textarea{
+  textarea {
 
     padding-top: 22px;
     width: 100%;
@@ -1276,22 +1296,23 @@ textarea {
     background-color: $color_blue;
     outline: none;
     text-indent: 70px;
-    resize:none;
+    resize: none;
     border: none;
 
-    &::placeholder{
+    &::placeholder {
       color: #fff;
     }
-    &:focus{
+    &:focus {
       outline: none;
     }
   }
 }
-.bl_callBack__label:nth-of-type(2){
+
+.bl_callBack__label:nth-of-type(2) {
   border-left: none;
 }
 
-.bl_callBack__label:nth-of-type(3){
+.bl_callBack__label:nth-of-type(3) {
   clear: both;
   display: block;
   border-top: none;
@@ -1299,7 +1320,19 @@ textarea {
   height: auto;
 }
 
-.bl_callBack__form .form_callback__button{
+.bl_callBack__error {
+  float: left;
+  margin-top: 10px;
+  color: #f00;
+  text-shadow: #fff 2px 2px 0, #fff -2px -2px 0,
+  #fff -2px 2px 0, #fff 2px -2px 0;
+  &:before {
+    content: "*";
+    margin-right: 2px;
+  }
+}
+
+.bl_callBack__form .form_callback__button {
   float: right;
   margin-top: 22px;
   display: block;
@@ -1308,21 +1341,13 @@ textarea {
   transition: .3s all;
 
   &:hover,
-  &:focus{
+  &:focus {
     transition: .3s background-color;
     background-color: $color_btn;
     color: $color_yellow;
   }
-  
 
-  
 }
-
-
-
-
-
-
 
 .icon-commenting {
   &:before {
@@ -1336,11 +1361,6 @@ textarea {
   }
 
 }
-
-
-
-
-
 
 /*********************************************/
 /*FOOTER*/
