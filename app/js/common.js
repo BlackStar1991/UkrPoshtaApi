@@ -3,6 +3,7 @@ window.onload = function () {
     var body = $("body"),
         active = "active",
         $window = $(window);
+    var allPrices = $(".bl_viewCoast");
 
     ///  sliderEffect
     function sliderEffectForButtons(button, element, duration) {
@@ -30,6 +31,16 @@ window.onload = function () {
             });
         });
     }
+
+    //// Mobile menu
+
+    var btnMenu = $(".btn_menuList");
+
+    btnMenu.on("click", function(){
+       $(".header").toggleClass(active);
+
+    });
+
 
 ////////// Animation Plane
 
@@ -89,6 +100,33 @@ window.onload = function () {
     }
 
     sliderCustomers();
+
+//// Prise Slider
+
+  if($window.width() < 1200){
+
+      allPrices.addClass("owl-carousel");
+
+      allPrices.owlCarousel({
+          items: 1,
+          loop: true,
+          nav: true,
+          navText: true,
+          dots: false,
+          autoplay: false,
+          stopOnHover: true,
+          margin: 90,
+          smartSpeed: 1000,
+          autoplayTimeout: 4000,
+          pagination: false
+      });
+  }
+
+
+
+
+
+
 
 
 

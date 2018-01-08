@@ -1,4 +1,5 @@
 .header{
+  flex: 1 0 auto;
   width: 100%;
   padding-top: 26px;
   padding-bottom: 20px;
@@ -134,4 +135,30 @@
   &:focus{
     outline: none;
   }
+}
+
+.btn_menuList{
+  position: relative;
+  float: right;
+  width: 27px;
+  height: 22px;
+  background: none;
+  z-index: 101;
+
+  &:after{
+    content: "\f0c9";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    font-family: $FontAwesome;
+    color: $color_btn;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+
+  }
+
 }

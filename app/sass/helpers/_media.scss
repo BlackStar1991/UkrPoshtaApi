@@ -15,26 +15,283 @@
   .btn_sendLetter{
     width: 178px;
   }
+
+
+  .form_callback__button{
+    margin: 10px auto;
+  }
+
+
+  .bl_services__item{
+    margin-top: 50px;
+  }
+
+  .bl_viewCoast__item{
+    display: block;
+    margin: 0 auto;
+  }
+  .availability_services__item{
+    margin: 56px auto;
+  }
+
 }
 
 /* Medium Devices, Desktops 992px */
 @media only screen and (max-width: 991px) {
 
-  .bl_nav__full{
+  .header{
     position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 102;
   }
-  .bl_nav__item{
+
+  .main{
+    margin-top: 74px;
+  }
+
+
+  .bl_nav__full{
+    display: none;
+    margin-top: 98px;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+  }
+  .header.active .bl_nav__full{
     display: block;
   }
+  .header.active .btn_menuList{
+    &:after{
+      content: "\f2d4";
+    }
+  }
+
+  .bl_nav{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 100;
+    background-color: rgba(17, 183, 225, 0.6);
+  }
+
+
+  .bl_nav__item{
+
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+
+  }
+
+  .bl_nav__link{
+    font-size: 24px;
+    color: $color_yellow;
+    display: block;
+    border:none;
+
+    &:focus,
+    &:active{
+      color: #fff;
+      border: none;
+    }
+  }
+
+  .bl_advantages__inner{
+    flex-direction: column;
+  }
+  .bl_advantages__item{
+    margin: 10px auto;
+  }
+
+
+  .form_callback__label{
+    margin:  15px auto;
+  }
+
+  .form_callback__inner{
+    flex-direction: column;
+  }
+
+  .bl_services__item{
+    font-size: 20px;
+  }
+
+  .bl_integration__circle{
+    display: none;
+  }
+
+  .bl_integration__action{
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+    border:none;
+    color: $color_blue;
+    font-family: $MSC700;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+
+  .bl_integration__action:before{
+    content: "01";
+    left: 50%;
+    top: -200%;
+    width: 74px;
+    height: 74px;
+    transform:translateX(-50%);
+    line-height: 74px;
+    color: $color_blue;
+    font-family: $MSC700;
+    font-size: 38px;
+    text-align: center;
+    box-shadow: 3px 4px 11px 2px rgba(14, 151, 186, 0.34);
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  @for $i from 1 through 4 {
+    .bl_integration__step:nth-child(#{$i}) .bl_integration__action:before {
+      content: "0"+($i);
+    }
+  }
+
+
+  .bl_integration__action:after{
+    display: none;
+  }
+
+
+  .bl_integration__work{
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: initial;
+    height: auto;
+    background-color: inherit;
+    padding-right: 0;
+    padding-left: 0;
+
+    p{
+
+      text-align: center;
+      color: $color_blue;
+      font-family: $MSC300;
+      font-size: 18px;
+    }
+    &:after{
+      display: none;
+    }
+    &:before{
+      display: none;
+    }
+  }
+
 }
 
 /* Small Devices, Tablets 768px */
 @media only screen and (max-width: 768px) {
+  .main_logo__txt{
+    font-size: 18px;
+  }
+  .bl_info__tel{
+    font-size: 18px;
+  }
+
+  .footer .main_logo__txt{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .btn-play{
+    &:after{
+      font-size: 80px;
+    }
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .availability_services__item{
+    margin: 60px auto;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .bl_advantages{
+    margin-top: 30px;
+  }
+
+  .bl_aboutCompany__title,
+  .bl_advantages__title,
+  .bl_integration__title{
+    font-size: 28px;
+  }
+
+  .bl_advantages__item{
+    margin-top: 15px;
+  }
+
+  .bl_advantages__text{
+    font-size: 18px;
+  }
+
+  .bl_aboutCompany__text{
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .btn-play{
+    &:after{
+      font-size: 60px;
+    }
+  }
 
 }
 
 /* Extra Small Devices, Phones 480px */
 @media only screen and (max-width: 480px) {
+  .main_logo__txt{
+    font-size: 15px;
+  }
+  header .bl_info__tel{
+    padding-left: 0;
+    font-size: 14px;
+    &:before{
+      content:"";
+    }
+  }
+
+  .btn_menuList{
+    margin-top: -4px;
+  }
+
+  .bl_advantages__title {
+    font-size: 28px;
+  }
+
+  .bl_aboutCompany__text,
+  .bl_video__text{
+    font-size: 14px;
+    span{
+      font-size: 14px;
+    }
+  }
+  .icon-eye:before{
+    font-size: 24px;
+  }
+
+  .btn-play{
+    &:after{
+      font-size: 40px;
+    }
+  }
 
 }
 
